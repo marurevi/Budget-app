@@ -2,7 +2,7 @@ env:
   RUBY_VERSION: 3.1.2
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
-  POSTGRES_DB: blog_test
+  POSTGRES_DB: budget_test
 
 name: Rails Specs
 on: pull_request
