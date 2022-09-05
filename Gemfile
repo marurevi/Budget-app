@@ -93,3 +93,9 @@ group :test do
   # https://github.com/colszowka/simplecov
   gem 'simplecov', require: false
 end
+
+gem 'cancancan', '~> 3.4'
+
+gem 'bootstrap', '~> 5.2'
+
+gem 'jquery-rails', '~> 4.5'
