@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get 'users/sessions' => 'users/sessions#new'
+  get 'users/registrations' => 'users/registrations#new'
+  
   root "splash#index"
   get "home", to: "groups#index"
 end
