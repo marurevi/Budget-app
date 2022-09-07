@@ -39,7 +39,7 @@ RSpec.describe 'Splash#index', type: :system do
       user.confirm
       sign_in(user)
       visit root_path
-      expect(page).to have_current_path(home_path) # crear ruta dashboard_path
+      expect(page).to have_current_path(groups_path) # crear ruta dashboard_path
     end
   end
 end
