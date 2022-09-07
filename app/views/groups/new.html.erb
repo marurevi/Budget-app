@@ -1,0 +1,18 @@
+<h1>Add new category:</h1>
+<%= form_with model: @group, scope: :group, url: groups_path, method: :post, data: {turbo: false} do |f| %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, placeholder: "Add your new category" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :icon %><br />
+        <%= f.text_field :icon, placeholder: "Add link to a png, jpg o svg file"  %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Add new" %>
+    </div>
+<% end %>
+
+<%= link_to 'Back', groups_path %>
