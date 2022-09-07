@@ -28,5 +28,12 @@ RSpec.describe 'groups#new', type: :system do
         expect(page).to have_content 'Group_name'
       end
     end
+
+    context 'when the user click on the back button' do
+      it 'redirects to the groups index' do
+        click_on 'Back'
+        expect(page).to have_current_path(groups_path)
+      end
+    end
   end
 end

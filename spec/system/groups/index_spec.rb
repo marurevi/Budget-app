@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'groups#index', type: :system do
   let(:user) { FactoryBot.create(:user) }
   let(:group) { FactoryBot.create(:group) }
+  let(:operation) { FactoryBot.create(:operation) }
 
   context 'when user is not logged in' do
     it 'should redirect to the splash page' do
@@ -21,6 +22,8 @@ RSpec.describe 'groups#index', type: :system do
       @c5 = FactoryBot.create(:group, name: 'Cleaning', user:)
       @c6 = FactoryBot.create(:group, name: 'Car', user:)
       @c7 = FactoryBot.create(:group, name: 'Other', user:)
+      @op1 = FactoryBot.create(:operation, amount: 100, user:)
+      @c1.operations << @op1
       visit groups_path
     end
 
@@ -34,6 +37,10 @@ RSpec.describe 'groups#index', type: :system do
         expect(page).to have_content('Car')
         expect(page).to have_content('Other')
       end
+    end
+
+    it 'should render the total amount of transactions for each category' do
+      expect(page).to have_content('Total: $ 100')
     end
 
     it 'should have a link to create a new category' do

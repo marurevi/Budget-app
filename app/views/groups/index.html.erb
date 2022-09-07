@@ -8,6 +8,9 @@
           <%= category.name %>
           <span class="icon">
             <%= category.icon %>
+          </span><br>
+          <span class="transactions">
+          <h4>Total: $ <%= category.operations.sum(:amount) %></h4>
           </span>
         <% end %>
       </li>
