@@ -42,7 +42,7 @@ RSpec.describe 'groups#index', type: :system do
     it 'should render the total amount of transactions for each category' do
       expect(page).to have_content('Total: $ 100')
     end
-   
+
     it 'should have a link to create a new category' do
       expect(page).to have_link('New category', href: new_group_path)
     end
