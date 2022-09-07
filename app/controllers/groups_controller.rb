@@ -10,7 +10,8 @@ class GroupsController < ActionController::Base
   end
 
   def create
-    @group = Group.new(group_params)
+    @group = current_user.groups.build(group_params)
+
     if @group.save
       redirect_to groups_path
     else
