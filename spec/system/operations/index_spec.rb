@@ -57,7 +57,7 @@ RSpec.describe 'operations#index', type: :system do
         expect(page).to have_current_path(new_group_operation_path(@g2))
       end
     end
-    
+
     it 'should have a link to go back to the categories page' do
       expect(page).to have_link('Back')
     end
