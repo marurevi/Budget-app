@@ -1,1 +1,17 @@
 <h1>Home</h1>
+
+<div id="categories">
+  <ul>
+    <% @categories.each do |category| %>
+      <li id="#{category.name}">
+        <%= link_to group_operations_path(category.id) do %>
+          <%= category.name %>
+          <span class="icon">
+            <%= category.icon %>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<%= link_to 'New category', new_group_path %>
