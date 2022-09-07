@@ -1,0 +1,10 @@
+<h1><%= @group.name %></h1>
+
+<ul>
+<%= render @operations %>
+</ul>
+<h2>Total: <%= @total %></h2>
+
+<%= link_to 'New Transaction', new_group_operation_path(@group) %>
+
+<%= link_to 'Back', groups_path %>
