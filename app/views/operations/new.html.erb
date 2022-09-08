@@ -1,0 +1,29 @@
+<h1>Add new transaction:</h1>
+<%= form_with model: @operation, scope: :operation, url: group_operations_path(@group), method: :post, data: {turbo: false} do |f| %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, placeholder: "Add your new category" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :amount %><br />
+        <%= f.text_field :amount, placeholder: "Add the transaction amount"  %>
+    </div>
+
+    <div class="field">
+        <%= f.label 'Categories' %><br />
+        <%= f.collection_check_boxes :group_ids, Group.where(user: current_user).where.not(id: params[:group_id]), :id, :name, include_hidden: false %>
+    </div>
+    
+    <div class="actions">
+    <%= f.submit "Add new" %>
+    </div>
+    <% end %>
+
+    <%= link_to 'Back', group_operations_path(@group), class: "btn btn-primary" %>
+    
+  
+    
+    
+    
+    
