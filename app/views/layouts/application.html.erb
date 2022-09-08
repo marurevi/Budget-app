@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Budget</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>    
+<%= javascript_importmap_tags %>
+</head>
 
   <body>
+    
     <div>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

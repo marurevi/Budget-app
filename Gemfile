@@ -96,6 +96,7 @@ end
 
 gem 'cancancan', '~> 3.4'
 
-gem 'bootstrap', '~> 5.2'
 
 gem 'jquery-rails', '~> 4.5'
+
+gem "tailwindcss-rails", "~> 2.0"
