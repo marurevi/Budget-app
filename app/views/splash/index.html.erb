@@ -1,3 +1,9 @@
-  <h1 >Welcome to Budget app</h1>
-  <%= link_to "Sign up", new_user_registration_path %>
-  <%= link_to "Log in", new_user_session_path  %>
+<div class="container min-h-full h-screen flex flex-col justify-center items-center">
+  <div class="absolute flex flex-col justify-between">
+    <h1 class="text-5xl text-center font-bold text-[#344C55] mx-auto">Smartest</h1>
+    <div class="container relative bottom 0.5 h-16 w-full mt-6 mx-auto">
+        <div class="btn-primary"><%= link_to "Sign up", new_user_registration_path %></div>
+        <div class="text-2x1 text-center text-[#344C55]"><%= link_to "Log in", new_user_session_path  %></div>
+     </div>
+  </div>
+</div>

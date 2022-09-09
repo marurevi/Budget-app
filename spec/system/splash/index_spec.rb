@@ -8,7 +8,7 @@ RSpec.describe 'Splash#index', type: :system do
 
   context 'when user is not logged in' do
     it 'should show the splash page' do
-      expect(page).to have_content('Welcome to Budget app')
+      expect(page).to have_content('Smartest')
     end
 
     it 'should show the sign up link' do
