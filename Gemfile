@@ -95,8 +95,3 @@ group :test do
 end
 
 gem 'cancancan', '~> 3.4'
-
-
-gem 'jquery-rails', '~> 4.5'
-
-gem "tailwindcss-rails", "~> 2.0"

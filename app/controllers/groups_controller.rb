@@ -1,6 +1,4 @@
-class GroupsController < ActionController::Base
-  before_action :authenticate_user!
-
+class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
@@ -23,9 +21,5 @@ class GroupsController < ActionController::Base
 
   def group_params
     params.require(:group).permit(:name, :icon)
-  end
-
-  def authenticate_user!
-    redirect_to root_path unless user_signed_in?
   end
 end

@@ -14,7 +14,7 @@
  *= require_self
 */
 
-.container {
-  background-color: red;
-  max-width: 960px;
+body {
+  background-color: blue;
+  color: red;
 }

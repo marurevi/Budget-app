@@ -8,7 +8,7 @@ RSpec.describe 'operations#index', type: :system do
   context 'when user is not logged in' do
     it 'should redirect to the splash page' do
       visit group_operations_path(group)
-      expect(page).to have_current_path(root_path)
+      expect(page).to have_current_path(new_user_session_path)
     end
   end
   context 'when user is logged in' do
