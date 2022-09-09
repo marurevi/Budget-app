@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Proxima Nova Bold', sans-serif;
+  src: url('./fonts/Proxima-Nova-Alt-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light', sans-serif;
+  src: url('./fonts/Proxima-Nova-Alt-Light.otf');
+}
+
 @layer base{
   html {
     background-color: #434C55;

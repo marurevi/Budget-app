@@ -97,3 +97,5 @@ end
 gem 'cancancan', '~> 3.4'
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "material_icons", "~> 2.2"
