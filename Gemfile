@@ -95,3 +95,5 @@ group :test do
 end
 
 gem 'cancancan', '~> 3.4'
+
+gem "tailwindcss-rails", "~> 2.0"

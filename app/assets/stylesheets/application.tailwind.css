@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html {
+    background-color: #434C55;
+    color: black;
+    font-family: Tahoma, sans-serif;
+  }
+  
+}
+
+
+@layer components {
+  
+  .btn-primary {
+    @apply h-12 mx-6 font-semibold text-center align-text-center bg-[#3678C2] rounded-md border border-slate-200 text-white ;
+  }
+}
+ 
