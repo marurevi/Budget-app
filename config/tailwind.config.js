@@ -17,8 +17,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Proxima Nova Bold', 'Proxima Nova Light', 'Inter var', ...defaultTheme.fontFamily.sans],
-        'nova_bold': ['Proxima Nova Bold', ...defaultTheme.fontFamily.sans],
-        'nova_light': ['Proxima Nova Light', ...defaultTheme.fontFamily.sans],
+        'nova_bold': ['Proxima-Nova-Bold', ...defaultTheme.fontFamily.sans],
+        'nova_light': ['Proxima-Nova-Light', ...defaultTheme.fontFamily.sans],
       },
     }, 
   },
