@@ -1,18 +1,18 @@
-<h1>Add new category:</h1>
-<%= form_with model: @group, scope: :group, url: groups_path, method: :post, data: {turbo: false} do |f| %>
+<%= render "header" %>
+<h1 class="absolute top-5 left-24 title-page">NEW CATEGORY</h1>
+<%= form_with model: @group, scope: :group, url: groups_path, method: :post, data: {turbo: false}, class: "w-full flex flex-col justify-center" do |f| %>
     <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, placeholder: "Add your new category" %>
+      <%= f.label :name, class:"hidden" %>
+      <%= f.text_field :name, placeholder: "Category Name", class:"input-field" %>
     </div>
 
-    <div class="field">
-        <%= f.label :icon %><br />
-        <%= f.text_field :icon, placeholder: "Add link to a png, jpg o svg file"  %>
+    <div class="field w-90 mx-auto mt-4">
+        <%= f.label :icon, 'Select Icon:', class: "mb-2 font-nova_light" %><br/>
+        <%= f.select :icon, ["👔", "🎵", "🎟️", "🏆", "⚽", "🎮", "🎭", "🎨", "🎉", "🚗", "✈️", "🚢", "🚌", "🚊", "💈", "⛺", "🏨", "🏥", "🏗️​", "🏭", "🏖️", "🍽️", "🍼", "🥂", "🍔", "🍧", "🐕‍🦺​", "👩‍👧‍👧", "👨‍👩‍👧‍👦​", "🤖"], value: @group.icon, placeholder: "Select an Icon", required: true, class:"input-field" %>
     </div>
   
-    <div class="actions">
+    <div class="actions btn-primary absolute top-5 right-3 font-nova_light">
       <%= f.submit "Add new" %>
     </div>
 <% end %>
 
-<%= link_to 'Back', groups_path %>

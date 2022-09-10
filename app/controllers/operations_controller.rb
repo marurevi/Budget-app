@@ -1,6 +1,4 @@
 class OperationsController < ApplicationController
-  before_action :authenticate_user!
-
   def new
     @group = Group.find(params[:group_id])
     @operation = Operation.new
@@ -25,10 +23,6 @@ class OperationsController < ApplicationController
   end
 
   private
-
-  def authenticate_user!
-    redirect_to root_path unless user_signed_in?
-  end
 
   def operation_params
     params.require(:operation).permit(:name, :amount)

@@ -1,10 +1,9 @@
-<h1><%= @group.name %></h1>
+<%= render "header" %>
+<h1 class="absolute top-5 left-28 title-page"><%= @group.name.upcase %></h1>
+<h2 class="bg-white shadow-md w-full text-2x1 font-bold p-2">Total: $ <%= @total %></h2>
 
-<ul>
+<ul class="flex flex-col mx-auto">
 <%= render @operations %>
 </ul>
-<h2>Total: <%= @total %></h2>
 
-<%= link_to 'New Transaction', new_group_operation_path(@group) %>
-
-<%= link_to 'Back', groups_path %>
+<div class="btn-secondary"><%= link_to 'New Transaction', new_group_operation_path(@group), class: 'border border-white py-2 px-24 text-white' %></div>

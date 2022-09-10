@@ -1,0 +1,15 @@
+<div class="w-screen h-20 px-2 bg-bluew text-white">
+  <div class= 'flex flex-row justify-between items-center px-1'>
+      <%= link_to groups_path do %>
+        <% if current_page? groups_path %>
+          <span class="material-icons md-light md-36 mt-2">menu</span>
+        
+      <% else %>
+        <span class="material-icons md-light md-36 mt-2">arrow_back</span>
+      <% end %>
+      <% end %>
+    <%= button_to "Logout", destroy_user_session_path, { data: { turbo: false }, class: 'btn-primary px-1 mt-1.5 border-0', method: :delete } %>
+  </div>
+</div>
+       
+        

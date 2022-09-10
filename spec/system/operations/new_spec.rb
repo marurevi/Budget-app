@@ -31,7 +31,7 @@ RSpec.describe 'operations#new', type: :system do
       end
 
       it 'should have a back button' do
-        expect(page).to have_link('Back')
+        expect(page).to have_link('arrow_back')
       end
 
       context 'when the user click on some categories' do
@@ -44,7 +44,7 @@ RSpec.describe 'operations#new', type: :system do
 
           check @g2.name
           check @g3.name
-          click_button 'Add new'
+          click_on 'Add new'
 
           visit group_operations_path(@g2)
           expect(page).to have_content('New transaction')
@@ -60,21 +60,21 @@ RSpec.describe 'operations#new', type: :system do
         it 'should create a new transaction' do
           fill_in 'Name', with: 'Movie teather'
           fill_in 'Amount', with: 100
-          click_button 'Add new'
+          click_on 'Add new'
           visit group_operations_path(@g1)
           expect(page).to have_content('Movie teather')
         end
         it 'should redirect to the transactions page' do
           fill_in 'Name', with: 'Movie teather'
           fill_in 'Amount', with: 100
-          click_button 'Add new'
+          click_on 'Add new'
           expect(page).to have_current_path(group_operations_path(@g1))
         end
       end
 
       context 'when the user click on the back button' do
         it 'should redirect to the transactions page' do
-          click_link 'Back'
+          click_on 'arrow_back'
           expect(page).to have_current_path(group_operations_path(@g1))
         end
       end

@@ -8,7 +8,7 @@ RSpec.describe 'groups#index', type: :system do
   context 'when user is not logged in' do
     it 'should redirect to the splash page' do
       visit groups_path
-      expect(page).to have_current_path(root_path)
+      expect(page).to have_current_path(new_user_session_path)
     end
   end
   context 'when user is logged in' do
@@ -44,12 +44,12 @@ RSpec.describe 'groups#index', type: :system do
     end
 
     it 'should have a link to create a new category' do
-      expect(page).to have_link('New category', href: new_group_path)
+      expect(page).to have_link('NEW CATEGORY', href: new_group_path)
     end
 
     context 'when user clicks on the New category link' do
       it 'should redirect to the new category page' do
-        click_on 'New category'
+        click_on 'NEW CATEGORY'
         expect(page).to have_current_path(new_group_path)
       end
     end

@@ -1,5 +1,7 @@
-<div class="container text-center">
-  <h1>Welcome to Budget app</h1>
-  <%= link_to "Sign up", new_user_registration_path %>
-  <%= link_to "Log in", new_user_session_path  %>
+<div class="container min-h-screen max-h-screen flex flex-col justify-evenly items-center px-3">
+    <h1 class="text-5xl text-center font-nova_bold text-grayw mx-auto">Smartest</h1>
+    <div class="w-full mt-16">
+        <div class="btn-primary block w-full "><%= link_to "Sign up", new_user_registration_path %></div>
+        <div class="text-2x1 text-center font-nova_light text-grayw block w-full"><%= link_to "Log in", new_user_session_path  %></div>
+     </div>
 </div>
