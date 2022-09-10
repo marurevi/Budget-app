@@ -1,0 +1,20 @@
+<%= render "header" %>
+<h1 class="absolute top-5 left-24 title-page">CATEGORIES</h1>
+<div id="categories" class='container'>
+  <ul class="flex flex-col mx-auto">
+    <% @categories.each do |category| %>
+      <li id="#{category.name}" class="card-body text-lg">
+        <%= link_to group_operations_path(category.id) do %>
+          <%= category.name %>
+          <span class="icon">
+            <%= category.icon %>
+          </span><br>
+          <span class="transactions">
+          <h4 class="font-bold">Total: $ <%= category.operations.sum(:amount) %></h4>
+          </span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="btn-secondary"><%= link_to 'NEW CATEGORY', new_group_path, class: 'border border-white py-2 px-24 text-white' %></div>

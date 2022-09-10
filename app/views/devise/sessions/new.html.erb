@@ -1,0 +1,20 @@
+<%= render "header" %>
+<h2 class="title-page absolute top-5 left-44">LOG IN</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}, html: { class: 'w-full'}) do |f| %>
+  <div class="fiel mt-4">
+    <%= f.label :email, class: "hidden" %>
+    <%= f.email_field :email, autofocus: true, placeholder: "Email", class:"input-field" %>
+  </div>
+
+  <div class="field mb-4">
+    <%= f.label :password, class:"hidden" %>
+    <%= f.password_field :password, placeholder: "Password", class:"input-field" %>
+  </div>
+
+  <div class="actions btn-primary absolute top-5 right-3 border-0 font-nova_light">
+    <%= f.submit "Log In" %>
+  </div>
+<% end %>
+
+<div class= "w-full flex flex-col text-center font-nova_light"><%= render "devise/shared/links" %></div>

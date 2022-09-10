@@ -1,0 +1,9 @@
+<%= render "header" %>
+<h1 class="absolute top-5 left-28 title-page"><%= @group.name.upcase %></h1>
+<h2 class="bg-white shadow-md w-full text-2x1 font-bold p-2">Total: $ <%= @total %></h2>
+
+<ul class="flex flex-col mx-auto">
+<%= render @operations %>
+</ul>
+
+<div class="btn-secondary"><%= link_to 'New Transaction', new_group_operation_path(@group), class: 'border border-white py-2 px-24 text-white' %></div>

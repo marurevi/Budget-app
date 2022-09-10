@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('fonts/Proxima-Nova-Alt-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('fonts/Proxima-Nova-Alt-Light.otf');
+}
+
+@layer base{
+  html {
+    background-color: #F1F1F1;
+    color: grayw;
+    font-family: 'Proxima-Nova-Light';
+  }
+  
+}
+
+
+@layer components {
+  
+  .btn-primary {
+    @apply h-12 px-6 pt-1 font-nova_bold text-center bg-bluew rounded-md border-0 text-lg text-white ;
+  }
+  .btn-secondary {
+    @apply fixed bottom-0 w-full h-20 text-2xl font-nova_bold text-center text-white bg-greenw hover:bg-green-400 rounded-md py-5 mt-16;
+  }
+  .card-body {
+    @apply bg-white shadow-md p-2 m-2;
+  }
+  .title-page {
+    @apply  text-2xl font-nova_bold text-white
+  }
+  .input-field {
+    @apply w-full border-neutral-200 border-x-0 font-nova_light;
+  }
+}
+ 

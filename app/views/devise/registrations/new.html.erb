@@ -1,0 +1,34 @@
+<%= render "header" %>
+<h2 class="title-page absolute top-5 left-44">REGISTER</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), data:{turbo: false}) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :name, class: "hidden" %>
+    <%= f.text_field :name, autofocus: true, placeholder: "Name", class:"input-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, class:"hidden" %>
+    <%= f.email_field :email, autofocus: true, placeholder: "Email", class:"input-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, class:"hidden" %>
+    <%= f.password_field :password, placeholder: "Password", class:"input-field" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+  </div>
+
+  <div class="field mb-4">
+    <%= f.label :password_confirmation, class: "hidden" %><br />
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class:"input-field" %>
+  </div>
+
+  <div class="actions btn-primary absolute top-5 right-3 font-nova_light">
+    <%= f.submit "Sign Up" %>
+  </div>
+<% end %>
+
+<div class= "w-full flex flex-col text-center font-nova_light"><%= render "devise/shared/links" %></div>

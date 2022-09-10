@@ -1,0 +1,30 @@
+<%= render "header" %>
+<h1 class="absolute top-5 left-24 title-page">NEW TRANSACTION</h1>
+<%= form_with model: @operation, scope: :operation, url: group_operations_path(@group), method: :post, data: {turbo: false}, class: "w-full flex flex-col justify-center" do |f| %>
+    <div class="field">
+      <%= f.label :name, class: "hidden" %>
+      <%= f.text_field :name, placeholder: "Transaction Name", class:"input-field" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :amount, class: "hidden" %>
+        <%= f.text_field :amount, placeholder: "Transaction Amount", class:"input-field" %>
+    </div>
+
+    <div class="grid grid-cols-2 p-3 gap-y-4 border border-neutral-200 bg-white">
+        <%= f.label 'Categories' %><br />
+        <%= f.collection_check_boxes :group_ids, Group.where(user: current_user).where.not(id: params[:group_id]), :id, :name, include_hidden: false %>
+    </div>
+    
+    <div class="actions btn-primary absolute top-5 right-3 font-nova_light">
+    <%= f.submit "Add new" %>
+    </div>
+    <% end %>
+
+    
+    
+  
+    
+    
+    
+    
