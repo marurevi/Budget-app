@@ -18,7 +18,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://git.heroku.com/budget-app-smartest.git)
+[Live Demo Link](https://budget-app-smartest.herokuapp.com)
 
 ## Getting Started
 
