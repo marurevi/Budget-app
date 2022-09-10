@@ -12,18 +12,16 @@ RSpec.describe 'groups#new', type: :system do
 
   context 'when user is visit the page' do
     it 'shows the form to create a new group' do
-      expect(page).to have_content 'Add new category:'
-      expect(page).to have_content 'Name'
-      expect(page).to have_content 'Icon'
-      expect(page).to have_content 'Add new'
-      expect(page).to have_content 'Back'
+      expect(page).to have_content 'NEW CATEGORY'
+      expect(page).to have_content 'Select Icon:'
+      expect(page).to have_content 'arrow_back'
     end
 
     context 'when the user fill the form with valid data' do
       it 'creates a new group' do
         fill_in 'Name', with: 'Group_name'
-        fill_in 'Icon', with: 'icon'
-        click_button 'Add new'
+        select '👔', from: 'Icon'
+        click_on 'Add new'
         visit groups_path
         expect(page).to have_content 'Group_name'
       end
@@ -31,7 +29,7 @@ RSpec.describe 'groups#new', type: :system do
 
     context 'when the user click on the back button' do
       it 'redirects to the groups index' do
-        click_on 'Back'
+        click_on 'arrow_back'
         expect(page).to have_current_path(groups_path)
       end
     end

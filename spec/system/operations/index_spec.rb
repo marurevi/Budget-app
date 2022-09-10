@@ -40,11 +40,11 @@ RSpec.describe 'operations#index', type: :system do
 
     it 'The list should be ordered by date from the most recent to the oldest' do
       transactions = all('li', count: 3)
-      expect(transactions.first).to have_content("#{@op5.name} - #{@op5.amount}")
+      expect(transactions.first).to have_content("#{@op5.name} - $ #{@op5.amount}")
     end
 
     it 'should have the total amount of transactions' do
-      expect(page).to have_content('Total: 10000')
+      expect(page).to have_content('Total: $ 10000')
     end
 
     it 'should have a link to create a new transaction' do
@@ -59,12 +59,12 @@ RSpec.describe 'operations#index', type: :system do
     end
 
     it 'should have a link to go back to the categories page' do
-      expect(page).to have_link('Back')
+      expect(page).to have_link('arrow_back', href: groups_path)
     end
 
     context 'when the user clicks on the back link' do
       it 'should redirect to the categories page' do
-        click_on 'Back'
+        click_on 'arrow_back'
         expect(page).to have_current_path(groups_path)
       end
     end
