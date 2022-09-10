@@ -17,8 +17,8 @@
 - Capybara
 
 ## Live Demo (if available)
-NOT AVAILABLE
-[Live Demo Link](https://livedemo.com)
+
+[Live Demo Link](https://budget-app-smartes.herokuapp.com/)
 
 ## Getting Started
 
