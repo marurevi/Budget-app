@@ -1,30 +1,97 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# Budget-app
+<div align="center">
 
-> You will create a Ruby on Rails application that allows the user to:
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+- [👥 Author](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Budget-app <a name="about-project"></a>
+
+> This is an application that allows the user to:
 
 > - register and log in, so that the data is private to them.
 > - introduce new transactions associated with a category.
 > - see the money spent on each category.
 
-## Built With
+**Budget-app** is a Ruby on Rails application...
 
-- Ruby on Rails
-- Boostrap
-- Postgres SQL
-- Rspec
-- Capybara
+## 🛠 Built With <a name="built-with"></a>
 
-## Live Demo (if available)
+### Tech Stack <a name="tech-stack"></a>
 
-[Live Demo Link](https://budget-app-smartest.herokuapp.com)
+<details>
+  <summary>Client / Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+  </ul>
+</details>
 
-## Getting Started
+<details>
+  <summary>Deploy</summary>
+  <ul>
+    <li><a href="https://render.com/">Render</a></li>
+  </ul>
+</details>
 
-To get a local copy up and running follow these simple example steps.
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Tests</summary>
+  <ul>
+    <li><a href="https://rspec.info/">Rspec</a></li>
+    <li><a href="https://github.com/teamcapybara/capybara">Capibara</a></li>
+  </ul>
+</details>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://smart-budget-app.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+
+In order to run this project you need:
 
 - You should have ruby installed in your machine, you can follow the steps given by the [official documentation](https://www.ruby-lang.org/en/documentation/installation/).
 
@@ -43,7 +110,6 @@ and navigate to the cloned directory:
 ```
 cd budget_app
 ```
-
 ### Install
 
 Once inside the project directory, you should install all project dependencies:
@@ -82,7 +148,10 @@ Windows users have to specify ruby in this case:
 ruby bin/rspec
 ```
 
-## Authors
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
+
 
 👤 **Mariana Revilla Lérida**
 
@@ -90,23 +159,41 @@ ruby bin/rspec
 - Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
 - LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-l%C3%A9rida-a12aba143)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella). Published under the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/).
 - Linters workflow created by [@anagudelogu](https://github.com/anagudelogu)
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
